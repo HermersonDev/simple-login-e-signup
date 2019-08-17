@@ -2,6 +2,6 @@
 
 Esta é uma simples tela de login desenvolvida apenas com HTML, CSS e JS.
 
-### Mock
-<br>
+**Mock da Tela**
+
 ![Mock](src/imgs/mock.png)
