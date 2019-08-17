@@ -9,31 +9,32 @@
 	<link rel="stylesheet" type="text/css" href="src/css/main.css">
 </head>
 <body>
-	<!-- LOGIN -->
-	<div>
-		<div class="container">
-			<div class="content">
+	
+	<main>
+		<!-- LOGIN -->
+		<div class="content">
+			<div class="login">
 				<h4>Log In</h4>
 				<img src="src/imgs/user-avatar.png">
 				<form>
 					<div class="group">
 						<div class="input-header">
 							<label>E-mail</label>
-							<small id="email-error">email error</small>
+							<small id="error-email">email error</small>
 						</div>
 						<div class="input-body">
 							<input type="text" name="email">
-							<i class="material-icons">accessibility</i>
+							<i class="material-icons">mail_outline</i>
 						</div>
 					</div>
 					<div class="group">
 						<div class="input-header">
 							<label>Senha</label>
-							<small id="senha-error">senha error</small>
+							<small id="error-senha">senha error</small>
 						</div>
 						<div class="input-body">
-							<input type="text" name="senha">
-							<i class="material-icons">accessibility</i>
+							<input type="password" name="senha">
+							<i class="visibility material-icons">visibility_off</i>
 						</div>
 					</div>
 					<div class="group btn-group">
@@ -43,10 +44,73 @@
 					</div>
 				</form>
 			</div>
+			<div class="signup">
+				<h4>Registrar-se</h4>
+				<form>
+					<div class="group picture">
+						<img src="src/imgs/user-avatar.png">
+						<div>
+							<div class="input-header">
+								<label>Escolha sua foto</label>
+							</div>
+							<div class="input-body">
+								<input type="text" name="email">
+								<i class="material-icons">search</i>
+							</div>	
+						</div>
+					</div>
+					<div class="group">
+						<div class="input-header">
+							<label>Nome</label>
+							<small id="error-nome"></small>
+						</div>
+						<div class="input-body">
+							<input type="text" name="email">
+							<i class="material-icons">person_outline</i>
+						</div>
+					</div>
+					<div class="group">
+						<div class="input-header">
+							<label>E-mail</label>
+							<small id="error-email"></small>
+						</div>
+						<div class="input-body">
+							<input type="password" name="senha">
+							<i class="material-icons">mail_outline</i>
+						</div>
+					</div>
+					<div class="group">
+						<div class="input-header">
+							<label>Senha</label>
+							<small id="error-email"></small>
+						</div>
+						<div class="input-body">
+							<input type="password" name="email">
+							<i class="visibility material-icons">visibility_off</i>
+						</div>
+					</div>
+					<div class="group">
+						<div class="input-header">
+							<label>Confirmar Senha</label>
+							<small id="error-email">email error</small>
+						</div>
+						<div class="input-body">
+							<input type="password" name="email">
+							<i class="visibility material-icons">visibility_off</i>
+						</div>
+					</div>
+					<div class="group btn-group">
+						<button type="submit" class="btn">Registrar</button>
+						<span>OU</span>
+						<button class="btn btn-outline">Já tenho conta!</button>
+					</div>
+				</form>
+			</div>
 			<small class="footer">@hdev_</small>
 		</div>
-	</div>
-	<!-- LOGIN -->
+		<!-- LOGIN -->
+	</main>
+	
 
 	<script type="text/javascript" src="src/js/main.js"></script>
 </body>
