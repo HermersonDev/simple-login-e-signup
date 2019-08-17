@@ -1,6 +1,6 @@
-## Simple Login
+## Simples Login & Signup
 
-Esta é uma simples tela de login desenvolvida apenas com HTML, CSS e JS.
+Simples telas de login e signup desenvolvida apenas com HTML, CSS e JS.
 
 **Mock da Tela**
 

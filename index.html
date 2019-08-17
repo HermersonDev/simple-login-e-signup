@@ -4,15 +4,49 @@
 	<title>Login</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-      <link rel="stylesheet" type="text/css" href="src/css/main.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="src/css/main.css">
 </head>
 <body>
-	
+	<!-- LOGIN -->
 	<div>
-		<span class="material-icons">accessibility</span>
+		<div class="container">
+			<div class="content">
+				<h4>Log In</h4>
+				<img src="src/imgs/user-avatar.png">
+				<form>
+					<div class="group">
+						<div class="input-header">
+							<label>E-mail</label>
+							<small id="email-error">email error</small>
+						</div>
+						<div class="input-body">
+							<input type="text" name="email">
+							<i class="material-icons">accessibility</i>
+						</div>
+					</div>
+					<div class="group">
+						<div class="input-header">
+							<label>Senha</label>
+							<small id="senha-error">senha error</small>
+						</div>
+						<div class="input-body">
+							<input type="text" name="senha">
+							<i class="material-icons">accessibility</i>
+						</div>
+					</div>
+					<div class="group btn-group">
+						<button type="submit" class="btn">Entrar</button>
+						<span>OU</span>
+						<button class="btn btn-outline">Registrar-se</button>
+					</div>
+				</form>
+			</div>
+			<small class="footer">@hdev_</small>
+		</div>
 	</div>
+	<!-- LOGIN -->
 
 	<script type="text/javascript" src="src/js/main.js"></script>
 </body>
