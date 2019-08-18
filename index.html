@@ -6,47 +6,47 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="src/css/main.css">
+	<link rel="stylesheet" type="text/css" href="./src/css/main.css">
 </head>
 <body>
 	
 	<main>
 		<!-- LOGIN -->
 		<div class="content">
-			<div class="login">
+			<div id="login">
 				<h4>Log In</h4>
 				<img src="src/imgs/user-avatar.png">
-				<form>
+				<form id="form-login">
 					<div class="group">
 						<div class="input-header">
 							<label>E-mail</label>
-							<small id="error-email">email error</small>
+							<small id="error-email1"></small>
 						</div>
 						<div class="input-body">
-							<input type="text" name="email">
+							<input type="text" id="email1" name="email">
 							<i class="material-icons">mail_outline</i>
 						</div>
 					</div>
 					<div class="group">
 						<div class="input-header">
 							<label>Senha</label>
-							<small id="error-senha">senha error</small>
+							<small id="error-senha1">senha error</small>
 						</div>
 						<div class="input-body">
-							<input type="password" name="senha">
+							<input type="password" id="senha1" name="senha">
 							<i class="visibility material-icons">visibility_off</i>
 						</div>
 					</div>
 					<div class="group btn-group">
-						<button type="submit" class="btn">Entrar</button>
+						<button id="btn-login" type="submit" class="btn">Entrar</button>
 						<span>OU</span>
-						<button class="btn btn-outline">Registrar-se</button>
+						<button id="go-signup" class="btn btn-outline">Registrar-se</button>
 					</div>
 				</form>
 			</div>
-			<div class="signup">
+			<div id="signup">
 				<h4>Registrar-se</h4>
-				<form>
+				<form id="form-signup">
 					<div class="group picture">
 						<img src="src/imgs/user-avatar.png">
 						<div>
@@ -54,8 +54,8 @@
 								<label>Escolha sua foto</label>
 							</div>
 							<div class="input-body">
-								<input type="text" name="email">
-								<i class="material-icons">search</i>
+								<input type="text" name="file">
+								<i class="search material-icons">search</i>
 							</div>	
 						</div>
 					</div>
@@ -65,44 +65,44 @@
 							<small id="error-nome"></small>
 						</div>
 						<div class="input-body">
-							<input type="text" name="email">
+							<input type="text" id="nome" name="nome">
 							<i class="material-icons">person_outline</i>
 						</div>
 					</div>
 					<div class="group">
 						<div class="input-header">
 							<label>E-mail</label>
-							<small id="error-email"></small>
+							<small id="error-email2"></small>
 						</div>
 						<div class="input-body">
-							<input type="password" name="senha">
+							<input type="text" id="email2" name="email">
 							<i class="material-icons">mail_outline</i>
 						</div>
 					</div>
 					<div class="group">
 						<div class="input-header">
 							<label>Senha</label>
-							<small id="error-email"></small>
+							<small id="error-senha2"></small>
 						</div>
 						<div class="input-body">
-							<input type="password" name="email">
+							<input type="password" id="senha2" name="senha">
 							<i class="visibility material-icons">visibility_off</i>
 						</div>
 					</div>
 					<div class="group">
 						<div class="input-header">
 							<label>Confirmar Senha</label>
-							<small id="error-email">email error</small>
+							<small id="error-confirm">email error</small>
 						</div>
 						<div class="input-body">
-							<input type="password" name="email">
+							<input type="password" id="confirm" name="confirm">
 							<i class="visibility material-icons">visibility_off</i>
 						</div>
 					</div>
 					<div class="group btn-group">
-						<button type="submit" class="btn">Registrar</button>
+						<button id="btn-signup" class="btn">Registrar</button>
 						<span>OU</span>
-						<button class="btn btn-outline">Já tenho conta!</button>
+						<a href="#" id="back-login" class="btn btn-outline">Já tenho conta!</a>
 					</div>
 				</form>
 			</div>
@@ -112,6 +112,6 @@
 	</main>
 	
 
-	<script type="text/javascript" src="src/js/main.js"></script>
+	<script type="text/javascript" src="./src/js/main.js"></script>
 </body>
 </html>

@@ -32,12 +32,29 @@ main {
 	width: 100%;
 }
 
-.login { 
-	display: none; 
+#login { 
+	display: none;
+	animation: form_animation 0.5s;
+	animation-fill-mode: forwards; 
 }
-.signup { 
+#signup { 
 	display: block;
-	width: 100%;  
+	animation: form_animation 0.5s;
+	animation-fill-mode: forwards;  
+}
+
+@keyframes form_animation {
+	0% {
+		opacity: 0.0;
+		width: 110%;
+	}
+	25% { opacity: 0.25; }
+	50% { opacity: 0.5; }
+	75% { opacity: 0.75; }
+	100% {
+		opacity: 1;
+		width: 100%;
+	}
 }
 
 .content {
@@ -72,10 +89,7 @@ div.input-body {
 	border: 2px solid #2962ff;
 	display: flex;
 	height: 40px;
-	width: 100%;
-
-	/*box-shadow: 1px 1px 5px rgba(41, 98, 255, 0.5);*/ 
-
+	width: 100%; 
 }
 
 div.input-body input {
@@ -111,7 +125,8 @@ div.input-body i {
 	padding: 5px;
 }
 
-div.input-body i[class*='visibility'] {
+div.input-body i[class*='visibility'],
+div.input-body i[class*='search'] {
 	cursor: pointer;
 }
 
@@ -159,8 +174,12 @@ img {
 	padding: 5px 10px;
 	text-align: center;
 	width: 50%;
+	line-height: 30px;
 }
 
+a.btn {
+	text-decoration: none;
+}
 .btn-outline {
 	background: none;
 	border: 2px solid #2962ff;
