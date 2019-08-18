@@ -24,7 +24,13 @@ for (let h = 0; h < inputs.length; h++) {
 
 	inputs[h].addEventListener('focusout', (event) => {
 		event.target.parentElement.style.boxShadow = "none";
-		validateData(event.target);
+		if (!validateData(event.target)) {
+			event.target.parentElement.style.border = "2px solid #d50000";
+			event.target.nextSibling.nextSibling.style.color = "#d50000";
+		} else {
+			event.target.parentElement.style.border = "2px solid #2962ff";
+			event.target.nextSibling.nextSibling.style.color = "#2962ff";
+		}
 	});
 }
 
@@ -34,26 +40,29 @@ function validateData(elt) {
 
 	switch (name) {
 		case 'email':
-			validateEmail(elt);
-			break;
+			return validateEmail(elt);
 		case 'senha':
 		case 'confirm':
-			validatePassword(elt, name);
-			break;
+			return validatePassword(elt, name);
 		case 'nome':
-			let value = elt.value || null;
-			let error = document.querySelector(`#error-${elt.id}`);
-			
-			if (!value) {
-				error.innerHTML = "Requerido";
-				error.style.display = 'block';
-				return false;			
-			}
-
-			break;
+			return validateNome(elt);
 	}
 
-	return;
+	return true;
+}
+
+function validateNome(elt) {
+	let value = elt.value || null;
+	let error = document.querySelector(`#error-${elt.id}`);
+	
+	if (!value) {
+		error.innerHTML = "Requerido";
+		error.style.display = 'block';
+		return false;			
+	}
+
+	error.style.display = 'none';
+	return true
 }
 
 function validateEmail(elt) {
@@ -73,11 +82,11 @@ function validateEmail(elt) {
 	if (!pattern.test(value)) {
 		error.innerHTML = "Inválido";
 		error.style.display = 'block';
-		return;	
+		return false;
 	}
 
 	error.style.display = 'none';
-	return;
+	return true;
 }
 
 function validatePassword(elt, name) {
@@ -96,11 +105,11 @@ function validatePassword(elt, name) {
 		if (!(senha === value)) {
 			error.innerHTML = "Não compatível";
 			error.style.display = 'block';
-			return;		
+			return false;		
 		}
 	}
 
-	error.display = 'none';
+	error.style.display = 'none';
 
-	return;		
+	return true;		
 }

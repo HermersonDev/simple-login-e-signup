@@ -33,12 +33,12 @@ main {
 }
 
 #login { 
-	display: none;
+	display: block;
 	animation: form_animation 0.5s;
 	animation-fill-mode: forwards; 
 }
 #signup { 
-	display: block;
+	display: none;
 	animation: form_animation 0.5s;
 	animation-fill-mode: forwards;  
 }
